@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Pokémon Web Emulator</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
 </head>
 <body>
 
@@ -15,7 +16,7 @@
     <button onclick="showTab('library')">Library</button>
   </nav>
 
-  <!-- Tabs -->
+  <!-- Play Tab -->
   <div id="play" class="tab-content">
     <h2>Emulator</h2>
     <p>Game screen will load here.</p>
@@ -23,28 +24,32 @@
     <button onclick="alert(loadState('currentGame'))">Load</button>
   </div>
 
-  <div id="harbour" class="tab-content" style="display:none;">
+  <!-- Harbour Tab -->
+  <div id="harbour" class="tab-content">
     <h2>Poké Harbour</h2>
-    <p>Browse and download ROMs.</p>
-    <h3>Standard Harbour</h3>
-    <p>Normal-sized ROMs listed here.</p>
-    <h3>Giga Section</h3>
-    <p>High-MB ROMs listed here.</p>
+    <p>Browse and download games directly from Poké Harbour:</p>
+    <ul>
+      <li><a href="https://poke-harbour.example.com/firered.gba" target="_blank">Download Pokémon FireRed</a></li>
+      <li><a href="https://poke-harbour.example.com/emerald.gba" target="_blank">Download Pokémon Emerald</a></li>
+      <li><a href="https://poke-harbour.example.com/leafgreen.gba" target="_blank">Download Pokémon LeafGreen</a></li>
+    </ul>
+    <p>After downloading, use the Upload tab to add the game into your Library.</p>
   </div>
 
-  <div id="upload" class="tab-content" style="display:none;">
+  <!-- Upload Tab -->
+  <div id="upload" class="tab-content">
     <h2>Upload Game</h2>
-    <input type="file" id="romUpload">
-    <button onclick="saveGameToLibrary('UploadedGame','initialData')">Upload</button>
+    <p>Select a ROM file (.gba) to add it to your Library:</p>
+    <input type="file" id="fileInput" accept=".gba">
+    <button onclick="handleUpload()">Upload</button>
   </div>
 
-  <div id="library" class="tab-content" style="display:none;">
+  <!-- Library Tab -->
+  <div id="library" class="tab-content">
     <h2>Library</h2>
-    <p>Your uploaded games will appear here.</p>
+    <p>Your downloaded and uploaded games will appear here:</p>
     <div id="libraryList"></div>
   </div>
 
-  <!-- Script -->
-  <script src="scripts.js"></script>
 </body>
 </html>
