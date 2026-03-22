@@ -1,0 +1,61 @@
+/* styles.css */
+
+/* Reset + base look */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  color: #333;
+}
+
+/* Navigation bar */
+nav {
+  background: #cc0000; /* Pokémon red */
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+nav button {
+  background: #fff;
+  border: none;
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav button:hover {
+  background: #ffcc00; /* Pokémon yellow highlight */
+}
+
+/* Tabs */
+.tab-content {
+  padding: 20px;
+  display: none; /* hidden until selected */
+  background: #fff;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h2 {
+  color: #cc0000;
+}
+
+/* Library entries */
+.library-entry {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fafafa;
+}
+.library-entry button {
+  margin-left: 10px;
+}
+
